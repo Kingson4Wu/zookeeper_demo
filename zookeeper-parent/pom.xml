@@ -11,17 +11,8 @@
 
 
     <modules>
-        <module>../automation-test</module>
-        <module>../cache</module>
-        <module>../common-utils</module>
-        <module>../encryption</module>
-        <module>../file-operation</module>
-        <module>../java-web</module>
-        <module>../jgit</module>
-        <module>../json-parse</module>
-        <module>../jdk-lib</module>
-        <module>../string-operation</module>
-        <module>../thread-related</module>
+        <module>../curator-framework</module>
+        <module>../zookeeper</module>
     </modules>
 
     <repositories>
