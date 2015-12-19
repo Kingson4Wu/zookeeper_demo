@@ -3,23 +3,23 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.kxw</groupId>
-    <artifactId>zookeeper-parent</artifactId>
+    <artifactId>zookeeper-demo</artifactId>
     <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
-    <name>zookeeper-parent</name>
+    <name>zookeeper-demo</name>
     <url>http://maven.apache.org</url>
 
 
     <modules>
-        <module>../curator-framework</module>
-        <module>../zookeeper</module>
+        <module>curator-framework</module>
+        <module>zookeeper</module>
     </modules>
 
     <repositories>
         <repository>
             <id>central</id>
             <name>Central Repository</name>
-            <url>https://nexus.sourcesense.com/nexus/content/repositories/public/</url>
+            <url>http://central.maven.org/maven2/</url>
             <layout>default</layout>
             <snapshots>
                 <enabled>false</enabled>

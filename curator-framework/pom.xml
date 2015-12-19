@@ -3,9 +3,9 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.kxw</groupId>
-        <artifactId>zookeeper-parent</artifactId>
+        <artifactId>zookeeper-demo</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../zookeeper-parent/pom.xml</relativePath>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>curator-framework</artifactId>
