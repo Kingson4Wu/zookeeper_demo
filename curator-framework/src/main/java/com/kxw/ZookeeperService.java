@@ -108,13 +108,37 @@ public class ZookeeperService implements CuratorWatcher {
         }
     }
 
+    public void setNodeData(String node, String data) {
+        try {
+            if (zkClient.checkExists().forPath(node) == null) {
+                zkClient.create().forPath(node);
+            }
+            zkClient.setData().forPath(node, data.getBytes());
+        } catch (Throwable e) {
+            logger.error("Error happen ： ", e);
+        }
+    }
+
 
     public static void main(String[] args) {
 
         ZookeeperService zkService = new ZookeeperService();
         zkService.init();
-        zkService.createPreZooKeeperNode("/kxw");
+        zkService.registerWatchedNode("/kxw");
+        zkService.setNodeData("/kxw","hehe");
 
+        waitIndefinitely();
 
+    }
+
+    public static void waitIndefinitely(){
+        Object lock = new Object();
+        try {
+            synchronized (lock) {
+                lock.wait();
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }
 }
